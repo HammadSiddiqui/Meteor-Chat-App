@@ -1,19 +1,29 @@
 <!-- display an individual user -->
 <template name="available_user">
-    <div class="col-md-2">
-        <div class="user_avatar">
-            {{#if isMyUser _id}}
-                <div class="bg-success">{{getUsername _id}} (YOU)
-                    <br/>
-                    <img src="/{{profile.avatar}}" class="avatar_img">
-                </div>
-            {{else}}
-                <a href="/chat/{{_id}}">
-                    {{getUsername _id}}
-                    <br/>
-                    <img src="/{{profile.avatar}}" class="avatar_img">
-                </a>
-            {{/if}}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="user_avatar pull-left">
+                {{#if isMyUser _id}}
+
+                    <div class="bg-success">
+                        <img src="/{{profile.avatar}}" class="avatar_img img-circle">
+                         <br/>
+                          <h4>{{getUsername _id}} (YOU)
+                         </h4>
+                    </div>
+
+                    <br>
+                {{else}}
+                    <a href="/chat/{{_id}}">
+
+                        <img src="/{{profile.avatar}}" class="avatar_img img-circle">
+                        <br/>
+                        <h4>{{getUsername _id}}</h4>
+                        <br>
+                    </a>
+                {{/if}}
+            </div>
         </div>
     </div>
+
 </template>

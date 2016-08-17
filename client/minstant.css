@@ -8,3 +8,26 @@
 .avatar_img{
 	height:75px;
 }
+
+.chat-thumbnail {
+	width:20px;
+}
+.my-message {
+	background-color: #67b168;
+	color: #fafafa;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+/* Bootstrap overrides */
+.navbar-inverse {
+	background-color: #3cafd2;
+	border-radius: 0;
+	border-color: darkcyan;
+}
+.navbar-inverse .navbar-brand {
+	color: #fafafa;
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: #fafafa;
+}

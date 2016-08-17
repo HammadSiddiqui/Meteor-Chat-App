@@ -1,5 +1,11 @@
 <!-- simple template that displays a message -->
 <template name="chat_message">
-    Someone said {{avatar by}}: {{text}}
+    <div class="{{myMessage by}}">
+        <img class="chat-thumbnail" src="/{{avatar by}}" alt=""> {{currentUser.username}}:
+    {{#emoji}}
+        {{text}}
+    {{/emoji}}
+
+    </div>
     <br>
 </template>
